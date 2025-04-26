@@ -9,85 +9,87 @@ To segment the image using global thresholding, adaptive thresholding and Otsu's
 ## Algorithm
 
 ### Step1:
-<br>
+Import required libraries.
 
 ### Step2:
-<br>
+Read the image and convert it to grayscale then display it.
 
 ### Step3:
-<br>
+Use Global thresholding to segment the image
 
 ### Step4:
-<br>
+Use Adaptive thresholding to segment the image
 
 ### Step5:
-<br>
+Use Otsu's method to segment the image 
+
+### Step6:
+End the program.
 
 ## Program
 
-```python
+## DEVELOPED BY : SANTHIYA R
+## REG NO : 212223230192
+
+```
+
 # Load the necessary packages
-
-
-
-
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
 
 # Read the Image and convert to grayscale
-
-
-
+image = cv2.imread('image.jpg')
+gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 # Use Global thresholding to segment the image
-
-
-
+ret_global, th_global = cv2.threshold(gray_image, 127, 255, cv2.THRESH_BINARY)
 
 # Use Adaptive thresholding to segment the image
-
-
-
+th_adaptive = cv2.adaptiveThreshold(gray_image, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY, 11, 2)
 
 # Use Otsu's method to segment the image 
-
-
+ret_otsu, th_otsu = cv2.threshold(gray_image, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
 
 # Display the results
 
+plt.imshow(th_global, cmap='gray')
+plt.title('Global Thresholding (v=127)')
+plt.xticks([]), plt.yticks([])
+plt.show()
 
+plt.imshow(th_adaptive, cmap='gray')
+plt.title('Adaptive Gaussian Thresholding')
+plt.xticks([]), plt.yticks([])
+plt.show()
 
-
+plt.imshow(th_otsu, cmap='gray')
+plt.title("Otsu's Thresholding")
+plt.xticks([]), plt.yticks([])
+plt.show()
 
 ```
 ## Output
 
 ### Original Image
-<br>
-<br>
-<br>
-<br>
-<br>
+
+![image](https://github.com/user-attachments/assets/15eb6ac0-3cd2-4e45-980b-7a11fc611ab3)
+
 
 ### Global Thresholding
-<br>
-<br>
-<br>
-<br>
-<br>
+
+![image](https://github.com/user-attachments/assets/0f6a6bad-23f9-4cb0-9aa6-bf799f0cf3a6)
+
 
 ### Adaptive Thresholding
-<br>
-<br>
-<br>
-<br>
-<br>
+
+![image](https://github.com/user-attachments/assets/9e88412a-27a2-48ae-93a2-3e9f2c0a3ef6)
+
 
 ### Optimum Global Thesholding using Otsu's Method
-<br>
-<br>
-<br>
-<br>
-<br>
+
+![image](https://github.com/user-attachments/assets/5ccbd187-ded3-4f7e-a6e9-76aab1ec29d0)
 
 
 ## Result
