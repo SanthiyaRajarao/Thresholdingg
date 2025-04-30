@@ -39,7 +39,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Read the Image and convert to grayscale
-image = cv2.imread('image.jpg')
+image = cv2.imread('ironman.jpeg')
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 # Use Global thresholding to segment the image
@@ -74,22 +74,26 @@ plt.show()
 
 ### Original Image
 
-![image](https://github.com/user-attachments/assets/15eb6ac0-3cd2-4e45-980b-7a11fc611ab3)
+![image](https://github.com/user-attachments/assets/fca1f661-2ab1-4581-bfdc-1eea046a5983)
 
 
 ### Global Thresholding
 
-![image](https://github.com/user-attachments/assets/0f6a6bad-23f9-4cb0-9aa6-bf799f0cf3a6)
+![image](https://github.com/user-attachments/assets/8b7f2132-ac11-40a1-88f8-53006f013881)
+
 
 
 ### Adaptive Thresholding
 
-![image](https://github.com/user-attachments/assets/9e88412a-27a2-48ae-93a2-3e9f2c0a3ef6)
+![image](https://github.com/user-attachments/assets/9ab6ce66-a0fa-47da-8f60-8e871c594f8d)
+
 
 
 ### Optimum Global Thesholding using Otsu's Method
 
-![image](https://github.com/user-attachments/assets/5ccbd187-ded3-4f7e-a6e9-76aab1ec29d0)
+![image](https://github.com/user-attachments/assets/93a98469-917e-4032-bab9-bc5905711b0d)
+
+
 
 
 ## Result
