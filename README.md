@@ -85,7 +85,8 @@ plt.show()
 
 ### Adaptive Thresholding
 
-![image](https://github.com/user-attachments/assets/9ab6ce66-a0fa-47da-8f60-8e871c594f8d)
+![image](https://github.com/user-attachments/assets/4d569f72-8558-45e9-ad02-775eeaf982e2)
+
 
 
 
